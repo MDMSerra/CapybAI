@@ -1,0 +1,19 @@
+site_name: "CapybAI - Intelligent AI for Capybaras"
+theme:
+  name: "readthedocs"
+  palette:
+    primary: "orange"
+    accent: "amber"
+
+extra_css:
+  - ./assets/css/main.css
+
+extra_javascript:
+  - ./assets/js/script.js
+
+nav:
+  - Home: index.md
+  - Features: features.md
+  - Pricing: pricing.md
+  - Policies: policies.md
+  - Terms & Conditions: terms.md

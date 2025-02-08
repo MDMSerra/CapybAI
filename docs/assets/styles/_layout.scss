@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-light;
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff; /* Fondo blanco por defecto */
+  color: #000000; /* Texto negro por defecto */
+}
+
+.dark-mode {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+}
