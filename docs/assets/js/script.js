@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleContainer = document.getElementById("dark-mode-toggle");
+    const toggleContainer = document.querySelector(".toggle-container");
+    const toggleSwitch = document.querySelector(".toggle-switch");
 
-    if (!toggleContainer) return;
+    if (!toggleContainer || !toggleSwitch) return;
 
     const applyDarkMode = () => {
         const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
         document.body.classList.toggle("dark-mode", darkModeEnabled);
-        toggleContainer.classList.toggle("active", darkModeEnabled);
+        toggleContainer.classList.toggle("dark", darkModeEnabled);
+        toggleSwitch.classList.toggle("dark", darkModeEnabled);
     };
 
     const toggleDarkMode = () => {
         const isDarkMode = document.body.classList.toggle("dark-mode");
-        toggleContainer.classList.toggle("active", isDarkMode);
+        toggleContainer.classList.toggle("dark", isDarkMode);
+        toggleSwitch.classList.toggle("dark", isDarkMode);
         localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
     };
 

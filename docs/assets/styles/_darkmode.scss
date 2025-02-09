@@ -69,3 +69,27 @@ body {
   background-color: color.adjust($background-dark, $lightness: -18%) !important;
   color: color.adjust($text-dark, $lightness: 35%);
 }
+
+.dark-mode #content-search {
+  background-color: $background-dark;
+  color: $text-dark;
+}
+
+.dark-mode #content-search input {
+  background-color: color.adjust($background-dark, $lightness: -10%);
+  color: $text-light;
+  border: 1px solid color.adjust($background-dark, $lightness: 10%);
+}
+
+.dark-mode #content-search input::placeholder {
+  color: color.adjust($text-dark, $lightness: 50%);
+}
+
+.dark-mode .search-results {
+  background-color: $background-dark;
+  color: $text-dark;
+}
+
+.dark-mode .search-results p {
+  color: $text-light;
+}
