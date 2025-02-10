@@ -39,13 +39,6 @@ body {
   color: $text-dark;
 }
 
-.dark-mode table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: color.adjust($background-dark, $lightness: -5%);
-  color: color.adjust($text-dark, $lightness: 20%);
-}
-
 .dark-mode th {
   background-color: color.adjust($background-dark, $lightness: 15%);
   color: color.adjust($text-dark, $lightness: 30%);
@@ -54,42 +47,11 @@ body {
   border: 1px solid color.adjust($background-dark, $lightness: 15%);
 }
 
-.dark-mode td {
-  background-color: color.adjust($background-dark, $lightness: -10%);
-  color: color.adjust($text-dark, $lightness: 30%);
-  padding: 8px;
-  border: 1px solid color.adjust($background-dark, $lightness: 15%);
-}
-
-.dark-mode tr:nth-child(even) td {
-  background-color: color.adjust($background-dark, $lightness: -18%);
-}
-
 .dark-mode tr:nth-child(odd) td {
   background-color: color.adjust($background-dark, $lightness: -18%) !important;
   color: color.adjust($text-dark, $lightness: 35%);
 }
 
-.dark-mode #content-search {
-  background-color: $background-dark;
-  color: $text-dark;
-}
-
-.dark-mode #content-search input {
-  background-color: color.adjust($background-dark, $lightness: -10%);
-  color: $text-light;
-  border: 1px solid color.adjust($background-dark, $lightness: 10%);
-}
-
-.dark-mode #content-search input::placeholder {
-  color: color.adjust($text-dark, $lightness: 50%);
-}
-
-.dark-mode .search-results {
-  background-color: $background-dark;
-  color: $text-dark;
-}
-
-.dark-mode .search-results p {
-  color: $text-light;
+.dark-mode .icon-light {
+  stroke: $secondary-color;
 }

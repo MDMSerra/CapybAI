@@ -6,9 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const applyDarkMode = () => {
         const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
-        document.body.classList.toggle("dark-mode", darkModeEnabled);
-        toggleContainer.classList.toggle("dark", darkModeEnabled);
-        toggleSwitch.classList.toggle("dark", darkModeEnabled);
+        if (darkModeEnabled) {
+            document.body.classList.add("dark-mode");
+            toggleContainer.classList.add("dark");
+            toggleSwitch.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark-mode");
+            toggleContainer.classList.remove("dark");
+            toggleSwitch.classList.remove("dark");
+        }
     };
 
     const toggleDarkMode = () => {
@@ -21,3 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleContainer.addEventListener("click", toggleDarkMode);
     applyDarkMode();
 });
+
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+}
