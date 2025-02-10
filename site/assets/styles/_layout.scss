@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "sass:color";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-light;
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+}
+
+.wy-menu-vertical {
+  ul {
+    li {
+      &.current {
+        background-color: $secondary-color;
+        a {
+          &:hover {
+            color: color.adjust($text-light, $lightness: -20%);
+          }
+        }
+      }
+      a {
+        color: $text-dark;
+        text-decoration: none;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .wy-nav-content {
+    max-width: 85%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,57 @@
+@use "variables" as *;
+@use "sass:color";
+
+body {
+  background-color: $background-light;
+  color: $text-light;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: $background-dark;
+  color: $text-dark;
+}
+
+.dark-mode a {
+  color: color.adjust($primary-color, $lightness: 40%);
+  text-decoration: none;
+}
+
+.dark-mode a:hover {
+  color: color.adjust($primary-color, $lightness: 60%);
+  text-decoration: underline;
+}
+
+.dark-mode .wy-nav-side,
+.dark-mode .wy-nav-content,
+.dark-mode .wy-nav-top {
+  background-color: $background-dark;
+}
+
+.dark-mode .wy-nav-top {
+  border-bottom: 1px solid color.adjust($primary-color, $lightness: 20%);
+}
+
+.dark-mode .wy-nav-content h1,
+.dark-mode .wy-nav-content h2,
+.dark-mode .wy-nav-content h3,
+.dark-mode .wy-nav-content h4 {
+  color: $text-dark;
+}
+
+.dark-mode th {
+  background-color: color.adjust($background-dark, $lightness: 15%);
+  color: color.adjust($text-dark, $lightness: 30%);
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid color.adjust($background-dark, $lightness: 15%);
+}
+
+.dark-mode tr:nth-child(odd) td {
+  background-color: color.adjust($background-dark, $lightness: -18%) !important;
+  color: color.adjust($text-dark, $lightness: 35%);
+}
+
+.dark-mode .icon-light {
+  stroke: $secondary-color;
+}
