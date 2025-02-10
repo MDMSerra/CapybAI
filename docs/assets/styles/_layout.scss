@@ -10,7 +10,6 @@ body {
 }
 
 .wy-menu-vertical {
-
   ul {
     li {
       &.current {
@@ -36,10 +35,8 @@ body {
   .wy-nav-content {
     max-width: 85%;
     margin: auto;
-  
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 }
-

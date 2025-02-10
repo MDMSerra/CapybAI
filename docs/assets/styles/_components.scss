@@ -4,7 +4,7 @@
 .toggle-container {
   position: fixed;
   top: 15px;
-  right: 20px; 
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,7 +45,7 @@
 
   &.dark::before {
     left: calc(100% - 25px);
-    background: $background-dark;
+    background: $text-dark;
   }
 }
 
